@@ -16,16 +16,16 @@ export default class TransferService {
             return new TransferResponse(520, "The amount must be major than zero.");
         }
         if (response.code == 521) {
-            storage.save("Try transfer amount not valid");
+            this.storage.save("Try transfer amount not valid");
             return new TransferResponse(521, "The amount can't be major than 200.000.");
         }
         if (response.code == 522) {
-            storage.save("Try with same accounts for transactions");
+            this.storage.save("Try with same accounts for transactions");
             return new TransferResponse(522, "The accounts can't be equals.");
         }
 
         if (response.code == 503) {
-            storage.save("Service Unavailable");
+            this.storage.save("Service Unavailable");
             return new TransferResponse(503, "The operation can't be process, please try again.");
         }
         

@@ -4,7 +4,7 @@ import ClientStub from "./clientStub";
 import StorageDummy from "./storageDummy";
 import StorageFake from "./storageFake";
 
-test('GivenTransRequestWhenAmountIsLessThanZeroThenResponseIs520 ', () => {
+test('Given TransRequest WhenAmountIsLessThanZero ThenResponseIs520 ', () => {
     //prepare
 
     let storage = new StorageDummy()
